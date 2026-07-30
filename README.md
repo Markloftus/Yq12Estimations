@@ -6,11 +6,13 @@ This repository contains two complementary k-mer–based tools for estimating th
 
 ### SRKmer
 
-`SRKmer` estimates Yq12 size from short-read sequencing data provided as BAM or CRAM files.
+`SRKmer` estimates Yq12 size from short-read sequencing data provided as BAM or CRAM files.<br>
+
+<i>Note</i>: The SRKmer is very slow (typical runs are 8-15 hours). When I originally built it (~3+ years ago) the plan was make it accurate and then speed it up. I managed to make it accurate then life of course blew up and I haven't gotten around to making it faster. If you need it faster just let me know I might be able to do so in the future versions. Also, as the manuscript states but I want to be very specific it only works with <b> non-PCR short reads </b>. We have tested it on reads generated from PCR and it greatly underestimates the Yq12 region. <br> 
 
 The pipeline identifies reads containing Yq12-derived k-mers, classifies Yq12 subunit-associated k-mers as DYZ1 or DYZ2, and normalizes the total associated read length by the sequencing depth of the sample.
 
-See [`SRKmer/README.md`](SRKmer/READ.me) for installation, required files, compilation, and usage instructions.
+See [`SRKmer/README.md`](SRKmer/README.md) for installation, required files, compilation, and usage instructions.
 
 ### LRKmer
 
@@ -18,7 +20,7 @@ See [`SRKmer/README.md`](SRKmer/READ.me) for installation, required files, compi
 
 The pipeline scans individual reads for Yq12-derived k-mers and uses a set of male-specific Y-chromosome k-mers to estimate sequencing depth and normalize the lengths of Yq12-associated reads.
 
-See [`LRKmer/README.md`](LRKmer/READ.me) for installation, required files, and usage instructions.
+See [`LRKmer/README.md`](LRKmer/README.md) for installation, required files, and usage instructions.
 
 ## Repository structure
 
@@ -59,7 +61,7 @@ For CRAM input, SRKmer also requires the same reference genome used to create th
 
 ## Output
 
-The pipelines produce sample-level estimates of Yq12 size. Depending on the selected tool, additional outputs may include:
+The pipelines produce sample-level estimates of Yq12 size. Depending on the selected tool (SRKmer or LRKmer), additional outputs may include:
 
 * Per-read Yq12 k-mer matching information
 * DYZ1- and DYZ2-associated estimates
@@ -81,11 +83,8 @@ A manuscript describing SRKmer and LRKmer is currently in preparation.
 
 Until a formal citation is available, please cite this GitHub repository and include the software version used in the analysis.
 
-## License
-
-See the repository’s `LICENSE` file for terms of use.
 
 ## Contact
 
-For questions, bug reports, or feature requests, please open an issue through GitHub.
+For questions, bug reports, or feature requests, please open an issue through GitHub. 
 
