@@ -8,7 +8,8 @@ This repository contains two complementary k-mer–based tools for estimating th
 
 `SRKmer` estimates Yq12 size from short-read sequencing data provided as BAM or CRAM files.<br>
 
-<i>Note</i>: The SRKmer is very slow (typical runs are 8-15 hours). When I originally built it (~3+ years ago) the plan was make it accurate and then speed it up. I managed to make it accurate then life of course blew up and I haven't gotten around to making it faster. If you need it faster just let me know I might be able to do so in the future versions. Also, as the manuscript states but I want to be very specific it only works with <b> non-PCR short reads </b>. We have tested it on reads generated from PCR and it greatly underestimates the Yq12 region. <br> 
+<i>Note</i>: The SRKmer is very slow (typical runs are 8-15 hours). When I originally built it (~3+ years ago) the plan was make it accurate and then speed it up. I managed to make it accurate then life of course blew up and I haven't gotten around to making it faster. If you need it faster just let me know I might be able to do so in the future versions. Also, as the manuscript states but I want to be very specific it only works with <b> non-PCR short reads </b>. We have tested SRKmer on sequencing libraries prepared using PCR amplification and found that it substantially underestimates Yq12 size.
+ <br> 
 
 The pipeline identifies reads containing Yq12-derived k-mers, classifies Yq12 subunit-associated k-mers as DYZ1 or DYZ2, and normalizes the total associated read length by the sequencing depth of the sample.
 
