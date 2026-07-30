@@ -1,9 +1,14 @@
-# How to run:
+# NOTE: You will need to calculate the average XDR sample depth before running the SRKmer as it takes in the depth as a paramter (I am using 15 as an example below). 
+
+# How to run SRKmer:
 
 python SRKmer-v1.0.py \
-  -i /path/to/your/input/file.cram \
-  -q /SuppliedKmers/yq12_CombinedUnion_1.0.txt \
-  -s /SuppliedKmers/Yq12_Union_1.0.txt \
-  -c /SuppliedKmers/centromere_CombinedUnion_1.0.txt \
-  -d /SuppliedKmers/Centromere_Union_1.0.txt \
-  -o /path/to/output/foldername
+    --input HG00477.cram \
+    --reference GRCh38.primary_assembly.genome.fa \
+    --yq12 Yq12_kmers.txt \
+    --yq12s Yq12_subunit_kmers.txt \
+    --cent Y_centromere_kmers.txt \
+    --cents DYZ3_kmers.txt \
+    --classification-json my_95Percent_Identity_SubunitKmers.json \
+    --sample-depth 15 \
+    --out results/
