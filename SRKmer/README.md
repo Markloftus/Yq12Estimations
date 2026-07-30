@@ -19,7 +19,7 @@ The exact filename will depend on the operating system and Python version.
 
 # STEP 3: Run the SRKmer
 
-How to run SRKmer:
+How to run SRKmer: </br>
 -(note: I suppled kmerENV.yml this is the conda environment I utilized during the runs on the compute cluster in case you just want to remake it - not necessary)
 
 python SRKmer-v1.0.py \
