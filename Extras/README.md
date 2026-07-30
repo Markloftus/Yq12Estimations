@@ -1,0 +1,1 @@
+The sampleDepths.json file contains average sample read depths across the XDR regions of 1500+ samples from the 1000 genomes. In case anyone is using those files and wanted that info or wanted to know the depths I used per sample in the manuscript. 
