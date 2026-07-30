@@ -19,7 +19,7 @@ See [`SRKmer/README.md`](SRKmer/README.md) for installation, required files, com
 
 `LRKmer` estimates Yq12 size from long-read sequencing data provided as compressed FASTQ files.
 
-The pipeline scans individual reads for Yq12-derived k-mers and uses a set of male-specific Y-chromosome k-mers to estimate sequencing depth and normalize the lengths of Yq12-associated reads.
+The pipeline scans individual reads for Yq12-derived k-mers and uses a set of male-specific X-Degenerate Regions (XDR) Y-chromosome k-mers to estimate sequencing depth and normalize the lengths of Yq12-associated reads.
 
 See [`LRKmer/README.md`](LRKmer/README.md) for installation, required files, and usage instructions.
 
