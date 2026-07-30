@@ -1,26 +1,26 @@
-STEP 1:
-## NOTE: You will need to calculate the average XDR sample depth before running the SRKmer as it takes in the depth as a paramter (I am using 15 as an example below; GRCh38.win.bed is supplied in supplemental tables but I will supply it again in this directory).
+# STEP 1:
+-NOTE: You will need to calculate the average XDR sample depth before running the SRKmer as it takes in the depth as a paramter (I am using 15 as an example below; GRCh38.win.bed is supplied in supplemental tables but I will supply it again in this directory).
 
 1) samtools bedcov -Q 20 GRCh38.win.bed CRAMFILE >> $SAMPLENAME.Cov.out
-2) # Then I read in the cov.out in python:
+2) Then I read in the cov.out in python:
     - keyDF = pd.read_csv(directory+sample, sep='\t', header=None,on_bad_lines='skip')
-    # Then I take the mean:
+    Then I take the mean:
     - float(np.mean(keyDF[3])/1000)
-    # This number gets passed as the --sample-depth float/integer below
+    This number gets passed as the --sample-depth float/integer below
 
 
-STEP 2: Compile the Cython extension
+# STEP 2: Compile the Cython extension
 
 1) python setup.py build_ext --inplace
 
-#This produces a compiled module with a name similar to:
+This produces a compiled module with a name similar to:
     -mainKmer.cpython-311-x86_64-linux-gnu.so
-#The exact filename will depend on the operating system and Python version.
+The exact filename will depend on the operating system and Python version.
 
-STEP 3: Run the SRKmer
+# STEP 3: Run the SRKmer
 
-## How to run SRKmer:
-(note: I suppled kmerENV.yml this is the conda environment I utilized during the runs on the compute cluster in case you just want to remake it - not necessary)
+How to run SRKmer:
+-(note: I suppled kmerENV.yml this is the conda environment I utilized during the runs on the compute cluster in case you just want to remake it - not necessary)
 
 python SRKmer-v1.0.py \
     --input HG00477.cram \
