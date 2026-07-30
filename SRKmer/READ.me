@@ -9,10 +9,13 @@ STEP 1:
     # This number gets passed as the --sample-depth float/integer below
 
 
-STEP 2: Setup the SRKmer scripts:
+STEP 2: Compile the Cython extension
 
+1) python setup.py build_ext --inplace
 
-
+#This produces a compiled module with a name similar to:
+    -mainKmer.cpython-311-x86_64-linux-gnu.so
+#The exact filename will depend on the operating system and Python version.
 
 STEP 3: Run the SRKmer
 
