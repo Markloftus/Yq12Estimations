@@ -12,3 +12,21 @@ python SRKmer-v1.0.py \
     --classification-json my_95Percent_Identity_SubunitKmers.json \
     --sample-depth 15 \
     --out results/
+
+# The program will write these files:
+results/HG00477_kmerSampleResults.tsv
+results/HG00477_yq12Sub_reads.txt
+results/HG00477_SampleLengths.json
+results/HG00477_SRKmerCalculationDetails.json
+
+
+# You will want to utilize the _sampleLengths.json information (I use the 'Unpolished' also named 'Refined' in the manuscript text. The Polished tends to over estimate but that is useful as a max length if you want a min-max window.):
+
+{
+    "HG00477": {
+        "DYZ1_Counts": 5554.010268,
+        "DYZ2_Counts": 5725.581489,
+        "Polished": 39131890.0,
+        "Unpolished": 33678170.0
+    }
+}
