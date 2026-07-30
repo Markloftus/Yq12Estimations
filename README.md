@@ -19,7 +19,7 @@ See [`SRKmer/README.md`](SRKmer/README.md) for installation, required files, com
 
 `LRKmer` estimates Yq12 size from long-read sequencing data provided as compressed FASTQ files.
 
-The pipeline scans individual reads for Yq12-derived k-mers and uses a set of male-specific X-Degenerate Regions (XDR) Y-chromosome k-mers to estimate sequencing depth and normalize the lengths of Yq12-associated reads.
+The pipeline scans individual reads for Yq12-derived k-mers and uses a set of male-specific X-Degenerate Regions (XDR) Y-chromosome k-mers to estimate sequencing depth and normalize the lengths of Yq12-associated reads. This pipeline is very fast and can usually finish in ~15-20 mins of run time. If you just need fairly accurate estimations and you have HiFi reads available I would just run this over the SRKmer unless runtime doesnt really matter and you care more about the accuracy. 
 
 See [`LRKmer/README.md`](LRKmer/README.md) for installation, required files, and usage instructions.
 
