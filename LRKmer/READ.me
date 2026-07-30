@@ -3,11 +3,21 @@
 python LRKmer-v1.0.py \
     --input sample.fastq.gz \
     --out sample_LRKmer.csv \
-    --msy-kmers YourDirectory/path/XDR_Kmers_filled_Filtered.json \
-    --cache-dir YourDirectory/path/ \
+    --msy-kmers /YourDirectory/path/XDR_Kmers_filled_Filtered.json \
+    --cache-dir /YourDirectory/path/ \
     --threads 8
 
 # What files need to be in the cache-dir:
 known_k24.npy
 msy_k24.npy
 cmap_k24.npy
+
+#If you need to rebuild the cache for some reason:
+python LRKmer-v1.0.py \
+    --input sample.fastq.gz \
+    --out sample_LRKmer.csv \
+    --msy-kmers /YourDirectory/path/XDR_Kmers_filled_Filtered.json \
+    --cache-dir /YourDirectory/path \
+    --known-kmers Yq12_24Mers_filled.json \
+    --rebuild-cache \
+    --threads 8
