@@ -34,13 +34,13 @@ python SRKmer-v1.0.py \
     --out results/
 
 ## The program will write these files:
-results/HG00477_kmerSampleResults.tsv
-results/HG00477_yq12Sub_reads.txt
-results/HG00477_SampleLengths.json
-results/HG00477_SRKmerCalculationDetails.json
+results/HG00477_kmerSampleResults.tsv </br>
+results/HG00477_yq12Sub_reads.txt </br>
+results/HG00477_SampleLengths.json </br>
+results/HG00477_SRKmerCalculationDetails.json </br>
 
 
-## You will want to utilize the _sampleLengths.json information (I use the 'Unpolished' also named 'Refined' in the manuscript text. The Polished tends to over estimate but that is useful as a max length if you want a min-max window.):
+You will want to utilize the _sampleLengths.json information (I use the 'Unpolished' also named 'Refined' in the manuscript text. The Polished tends to over estimate but that is useful as a max length if you want a min-max window.):
 
 {
     "HG00477": {
