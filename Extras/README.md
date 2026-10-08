@@ -82,24 +82,13 @@ Statistical analyses include:
 * Comparison of paired differences among haplogroups
 * Fisher’s exact tests relating the direction of father–son differences to the father’s position relative to global or haplogroup-specific Yq12 medians
 
-The notebook also generates paired father–son plots, percent-difference distributions, haplogroup-stratified figures, and intermediate CSV files used by subsequent analyses.
-
-### Intermediate outputs
-
-Among its intermediate outputs, this notebook creates the father–son datasets used by the Part 2 notebook:
-
-```text
-fatherSon_Yq12.csv
-fatherSon_RatioDF_Yq12.csv
-```
-
 ---
 
 ## `Part2_More_FatherVsSonStatisticalTesting.ipynb`
 
 This notebook performs a focused follow-up analysis of father–son DYZ1:DYZ2 subunit ratios.
 
-It uses the paired father–son datasets generated in Part 3 and asks whether sons tend to have DYZ1:DYZ2 ratios that are closer to an equal ratio of 1 than those of their fathers.
+It uses the paired father–son datasets generated in Part 1 and asks whether sons tend to have DYZ1:DYZ2 ratios that are closer to an equal ratio of 1 than those of their fathers.
 
 ### Main analysis
 
@@ -122,16 +111,6 @@ The statistical analyses include:
 * A regression-through-the-origin analysis of log-transformed father and son ratios
 * A test of whether the father-to-son slope is less than 1
 * The proportion of pairs remaining on the same side of a ratio of 1
-
-### Visualizations
-
-The notebook generates paired dumbbell plots showing father and son ratios using:
-
-* Raw DYZ1:DYZ2 ratios
-* Log-transformed ratios
-* Absolute log-distance from a ratio of 1
-
-These figures illustrate whether each son’s ratio moved toward or away from an equal DYZ1:DYZ2 ratio relative to his father.
 
 ---
 
