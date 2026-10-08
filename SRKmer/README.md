@@ -25,10 +25,10 @@ How to run SRKmer: </br>
 python SRKmer-v1.0.py \
     --input HG00477.cram \
     --reference GRCh38.primary_assembly.genome.fa \
-    --yq12 Yq12_kmers.txt \
-    --yq12s Yq12_subunit_kmers.txt \
-    --cent Y_centromere_kmers.txt \
-    --cents DYZ3_kmers.txt \
+    --yq12 yq12_CombinedUnion_1.0.txt \
+    --yq12s Yq12_Union_1.0.txt \
+    --cent centromere_CombinedUnion_1.0.txt \
+    --cents Centromere_Union_1.0.txt \
     --classification-json my_95Percent_Identity_SubunitKmers.json \
     --sample-depth 15 \
     --out results/
