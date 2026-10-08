@@ -135,10 +135,44 @@ These figures illustrate whether each son’s ratio moved toward or away from an
 
 ---
 
+## `Part3_Yq12_Size_Evolutionary_Constraint_BM_vs_OU_Expanded_Diagnostics.ipynb`
+
+This notebook investigates the evolutionary dynamics of Yq12 length using population-scale SRKmer estimates and a Y-chromosome phylogeny.
+
+The primary objective is to evaluate whether Yq12 length evolution is better described by Brownian motion (BM) or Ornstein–Uhlenbeck (OU) models, and to assess the robustness of these evolutionary interpretations.
+
+### Major analyses
+
+- Integration of estimated Yq12 lengths with the Y-chromosome phylogeny
+- Comparison of BM, stationary OU, and nonstationary OU models using likelihood-based model fitting and AIC
+- Estimation of the OU equilibrium Yq12 length and stationary size distribution
+- Parametric bootstrap simulations to evaluate the support for OU models relative to BM
+- Comparison with alternative evolutionary models, including Pagel's lambda, early-burst BM, and two-epoch BM
+- Sensitivity analyses examining phylogenetic rooting, branch lengths, and model assumptions
+
+---
+
+## `Part4_Yq12_1597_Compositional_Pairing.ipynb`
+
+This notebook investigates the relationship between DYZ1 and DYZ2 satellite abundance across the population-scale dataset and evaluates whether their relative proportions are more tightly coupled than expected from shared Y-chromosome ancestry alone.
+
+### Major analyses
+
+- Characterization of the relationship between DYZ1 and DYZ2 abundance and their relative proportions across individuals
+- Haplogroup-stratified permutation tests evaluating whether DYZ1 and DYZ2 are more tightly paired than expected by chance within Y lineages
+- Evaluation of DYZ1:DYZ2 compositional differences among Y-chromosome haplogroups
+- Sensitivity analyses accounting for related individuals within the population dataset
+- Father–son analyses comparing movement toward a 1:1 DYZ1:DYZ2 ratio with movement toward haplogroup-specific median compositions
+
+These analyses help distinguish population-level compositional coupling from patterns attributable to shared ancestry and investigate whether intergenerational changes in repeat composition reflect a tendency toward equal proportions or lineage-specific values.
+
+---
+
 ## Relationship between the notebooks
 
-`Part3_Publication-TheBigKahuna_AllTests.ipynb` is the main analysis notebook. It integrates the datasets, benchmarks the estimators, evaluates population and haplogroup patterns, and performs the primary father–son Yq12 length analyses.
+The four notebooks address complementary aspects of the Yq12 analysis:
 
-`Part4_FatherVsSonStatisticalTesting.ipynb` is a narrower follow-up notebook focused specifically on intergenerational changes in the DYZ1:DYZ2 subunit ratio.
-
-The notebooks are provided primarily for transparency and reproducibility of the analyses reported in the associated study.
+- **Part 1:** Primary data integration, SRKmer and LRKmer benchmarking, population-level Yq12 variation, haplogroup comparisons, and father–son Yq12 length analyses.
+- **Part 2:** Focused father–son statistical analyses evaluating whether DYZ1:DYZ2 ratios shift toward 1:1 between generations.
+- **Part 3:** Phylogenetic modeling of Yq12 length evolution, including BM/OU comparisons, alternative evolutionary models, and sensitivity analyses.
+- **Part 4:** Population-scale DYZ1/DYZ2 compositional coupling, haplogroup-stratified permutation analyses, and comparisons of father–son compositional changes relative to lineage-specific values.
