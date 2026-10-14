@@ -7,13 +7,25 @@ This repository contains two complementary k-mer–based tools for estimating th
 ### SRKmer
 
 `SRKmer` estimates Yq12 size from short-read sequencing data provided as BAM or CRAM files.<br>
-
-<i>Note</i>: The SRKmer is very slow (typical runs are 8-15 hours). When I originally built it (~3+ years ago) the plan was make it accurate and then speed it up. I managed to make it accurate then life of course blew up and I haven't gotten around to making it faster. If you need it faster just let me know I might be able to do so in the future versions. Also, as the manuscript states, but I want to be very specific, it only works with <b> non-PCR short reads </b>. We have tested SRKmer on sequencing libraries prepared using PCR amplification and found that it substantially underestimates Yq12 size. Finally, as the manuscript says there is a second type of k-mer library that is constructed from the Y centromere. This is used as a sort of filtering mechanism. Surprisingly, it greatly improved the Yq12 calling, but the centromere length estimates it provides <b>are NOT GOOD and SHOULD NOT BE UTILIZED</b>. Finally, the 1000 genomes samples were originally mapped to this reference (https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa). You will need this reference when working with the CRAM files. Though I would suggest utilizing this if you are working from FASTQ/A and are mapping reads as I have not extensively tested the tools utilizing all versions of GRCh38.
+<i>Note 1</i>: SRKmer v1.1 is new. This was NOT used in the manuscript but its very memory friendly. It also is faster than v1.0 but will still take between 3-10 hours to run a sample. This new version writes files to a temp location instead of holding in memory. I've tested some samples from 1000 genomes and the results were exactly the same. I would recommend using this version if you are trying to estimate lengths on your compute cluster. 
+<i>Note 2</i>: The SRKmer v1.0 is very slow (typical runs are 8-15 hours and memory hungry). When I originally built it (~3+ years ago) the plan was make it accurate and then speed it up. I managed to make it accurate then life of course blew up and I haven't gotten around to making it faster. If you need it faster just let me know I might be able to do so in the future versions. Also, as the manuscript states, but I want to be very specific, it only works with <b> non-PCR short reads </b>. We have tested SRKmer on sequencing libraries prepared using PCR amplification and found that it substantially underestimates Yq12 size. Finally, as the manuscript says there is a second type of k-mer library that is constructed from the Y centromere. This is used as a sort of filtering mechanism. Surprisingly, it greatly improved the Yq12 calling, but the centromere length estimates it provides <b>are NOT GOOD and SHOULD NOT BE UTILIZED</b>. Finally, the 1000 genomes samples were originally mapped to this reference (https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa). You will need this reference when working with the CRAM files. Though I would suggest utilizing this if you are working from FASTQ/A and are mapping reads as I have not extensively tested the tools utilizing all versions of GRCh38.
  <br> 
 
 The pipeline identifies reads containing Yq12-derived k-mers, classifies Yq12 subunit-associated k-mers as DYZ1 or DYZ2, and normalizes the total associated read length by the sequencing depth of the sample.
 
 See [`SRKmer/README.md`](SRKmer/README.md) for installation, required files, compilation, and usage instructions.
+
+#### How to run:
+python SRKmer-v1_1.py \
+  --input sample/HG01890.final.cram \
+  --reference /labs/Lee/ChromosomeY/loftum/DYZ3/reference/GRCh38_full_analysis_set_plus_decoy_hla.fa \
+  --yq12 Yq12_Union_1.0.txt \
+  --yq12s yq12_CombinedUnion_1.0.txt \
+  --cent Centromere_Union_1.0.txt \
+  --cents centromere_CombinedUnion_1.0.txt \
+  --classification-json my_95Percent_Identity_SubunitKmers.json \
+  --sample-depth 15 \
+  --out results_v1_1/
 
 ### LRKmer
 
