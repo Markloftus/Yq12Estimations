@@ -35,6 +35,14 @@ The pipeline scans individual reads for Yq12-derived k-mers and uses a set of ma
 
 See [`LRKmer/README.md`](LRKmer/README.md) for installation, required files, and usage instructions.
 
+#### How to run:
+python LRKmer-v1.0.py \
+    --input sample.fastq.gz \
+    --out sample_LRKmer.csv \
+    --msy-kmers /YourDirectory/path/XDR_Kmers_filled_Filtered.json \
+    --cache-dir /YourDirectory/path/ \
+    --threads 8
+    
 ## Repository structure
 
 ```text
