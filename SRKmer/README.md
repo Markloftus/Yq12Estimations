@@ -20,7 +20,7 @@ The exact filename will depend on the operating system and Python version.
 # STEP 3: Run the SRKmer
 
 How to run SRKmer: </br>
--(note: I suppled kmerENV.yml this is the conda environment I utilized during the runs on the compute cluster in case you just want to remake it - not necessary)
+-(note: I suppled kmerENV.yml this is the conda environment I utilized during the runs on the compute cluster in case you just want to remake it - not necessary). <br><br>
 
 python SRKmer-v1.0.py \
     --input HG00477.cram \
@@ -33,6 +33,9 @@ python SRKmer-v1.0.py \
     --sample-depth 15 \
     --out results/
 
+If you are using the updated v1.1 (or eventually newer) the same commands need to be utilized/files be fed to the SRKmer. Though you no longer need to do step 2. You can also specify: <br>
+--temp-dir /Your/Path/srkmer_tmp/ <br>
+This will tell the SRKmer where to write temporary files. If you do not pass it --temp-dir it will build the temporary files in --out. <br>
 ## The program will write these files:
 results/HG00477_kmerSampleResults.tsv </br>
 results/HG00477_yq12Sub_reads.txt </br>
