@@ -33,8 +33,8 @@ python SRKmer-v1.0.py \
     --sample-depth 15 \
     --out results/
 
-If you are using the updated v1.1 (or eventually newer) the same commands need to be utilized/files be fed to the SRKmer. Though you no longer need to do step 2. You can also specify: <br>
---temp-dir /Your/Path/srkmer_tmp/ <br>
+If you are using the updated v1.1 (or eventually newer) the same commands need to be utilized/files be fed to the SRKmer. Though you no longer need to do step 2. You can also specify: <br><br>
+--temp-dir /Your/Path/srkmer_tmp/ <br><br>
 This will tell the SRKmer where to write temporary files. If you do not pass it --temp-dir it will build the temporary files in --out. <br>
 ## The program will write these files:
 results/HG00477_kmerSampleResults.tsv </br>
