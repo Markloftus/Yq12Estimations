@@ -25,7 +25,9 @@ python SRKmer-v1_1.py \
   --cents centromere_CombinedUnion_1.0.txt \
   --classification-json my_95Percent_Identity_SubunitKmers.json \
   --sample-depth 15 \
-  --out results_v1_1/
+  --out results_v1_1 \
+  --temp-dir /Your/Path/srkmer_tmp/ \ <- only if using v1.1 or higher
+  --workers 7 <- only if using v1.1 or higher
 
 ### LRKmer
 
