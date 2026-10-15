@@ -33,9 +33,10 @@ python SRKmer-v1.0.py \
     --sample-depth 15 \
     --out results/
 
-If you are using the updated v1.1 (or eventually newer) the same commands need to be utilized/files be fed to the SRKmer. Though you no longer need to do step 2. You can also specify: <br><br>
+If you are using the updated SRKmer-v1_1.py (or eventually newer) the same commands need to be utilized/files be fed to the SRKmer. Though you no longer need to do step 2. You can also specify: <br><br>
 --temp-dir /Your/Path/srkmer_tmp/ <br><br>
-This will tell the SRKmer where to write temporary files. If you do not pass it --temp-dir it will build the temporary files in --out. <br>
+--workers 7 <br><br>
+This (--temp-dir) will tell the SRKmer where to write temporary files and --workers is how many different threads you want reading the file at a time. If you do not pass it --temp-dir it will build the temporary files in --out. You should set the number of workers to one less than the total CPUs you ask for. So if you are running a slurm job (#SBATCH --cpus-per-task=8) you should specify 7 workers. This gives seven scanning workers plus one CPU for reading and merging. <br>
 ## The program will write these files:
 results/HG00477_kmerSampleResults.tsv </br>
 results/HG00477_yq12Sub_reads.txt </br>
