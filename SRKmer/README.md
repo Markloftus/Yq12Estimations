@@ -9,7 +9,7 @@
     This number gets passed as the --sample-depth float/integer below
 
 
-# STEP 2: Compile the Cython extension (ONLY IF USING V1.0. V1.1 does NOT need this anymore)
+# STEP 2: Compile the Cython extension (ONLY IF USING V1.0. The newer versions do NOT need this anymore)
 
 1) python setup.py build_ext --inplace
 
