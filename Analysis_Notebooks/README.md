@@ -1,5 +1,5 @@
-# EXTRA FILES:
-The sampleDepths.json file contains average sample read depths across the XDR regions of 1500+ samples from the 1000 genomes. In case anyone is using those files and wanted that info or wanted to know the depths I used per sample in the manuscript. 
+# FILES:
+The sampleDepths.json file contains average sample read depths across the XDR regions of 1500+ samples from the 1000 genomes. In case anyone is using those files and wanted that info or wanted to know the depths I used per sample in the manuscript. RAxML_bestTree.bcft_1600_1K_Poznikb38_270521_SG5_woInd_AD15_DP3_wo2_miss3_VAR_CONC_wo7.nwk is the phylogeny used in the study. 
 
 # Analysis Notebooks
 
