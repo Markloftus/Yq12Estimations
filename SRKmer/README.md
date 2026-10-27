@@ -1,5 +1,5 @@
 # STEP 1:
--NOTE: You will need to calculate the average XDR sample depth before running the SRKmer as it takes in the depth as a paramter (I am using 15 as an example below; GRCh38.win.bed is supplied in supplemental tables but I will supply it again in this directory).
+-NOTE: You will need to calculate the average XDR (Y-chromosome X degenerate region) sample depth before running the SRKmer as it takes in the depth as a paramter (I am using 15 as an example below; GRCh38.win.bed is supplied in supplemental tables but I will supply it again in this directory).
 
 1) samtools bedcov -Q 20 GRCh38.win.bed CRAMFILE >> $SAMPLENAME.Cov.out
 2) Then I read in the cov.out in python:
