@@ -1,4 +1,4 @@
-## Current version is v1.1
+## Current version: v1.1
 
 # STEP 1: Unzip the Cache Directory zip file
 You will need these files for the LRKmer to work.</br>
