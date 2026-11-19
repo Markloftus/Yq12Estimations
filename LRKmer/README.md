@@ -22,14 +22,15 @@ python LRKmer-v1.1.py \
     --batch-size 512 \
     --temp-dir /YourDirectory/tmp/
 
-Argument	Description
---input	Input gzip-compressed FASTQ file
---out	Output CSV file
---msy-kmers	Path to the MSY normalization k-mer JSON file
---cache-dir	Directory containing the precomputed k-mer lookup arrays
---threads	Number of worker threads (default: 4)
---batch-size	Number of reads processed per worker task (default: 512; recommended: 512)
---temp-dir	Directory for temporary SQLite files (optional)
+| Argument | Description |
+|---|---|
+| `--input` | Input gzip-compressed FASTQ file. |
+| `--out` | Path to the output CSV file. |
+| `--msy-kmers` | Path to the MSY normalization k-mer JSON file. |
+| `--cache-dir` | Directory containing the precomputed k-mer lookup arrays (`known_k24.npy`, `msy_k24.npy`, and `cmap_k24.npy`). |
+| `--threads` | Number of worker threads (default: 8). |
+| `--batch-size` | Number of reads processed per worker task (default: 128; recommended: 512). |
+| `--temp-dir` | Directory for temporary SQLite files (optional). Temporary files are automatically removed after processing. |
 
 This will export a CSV file with all the read proportions. I suggest filtering by keeping all reads >=.50 in the 'proportion' column then summing the 'normalizedSize' column.
 
