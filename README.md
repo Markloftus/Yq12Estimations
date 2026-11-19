@@ -46,6 +46,8 @@ python SRKmer-v1_1.py \
 
 ### LRKmer
 
+Note: Version 1.1 is now available. LRKmer v1.1 significantly improves memory efficiency and processing speed. Compared with the original implementation, these optimizations reduced peak memory usage by approximately 77% and processing time by approximately 59%. <br>
+
 `LRKmer` estimates Yq12 size from long-read sequencing data (note: I have only tested on HiFi data not ONT) provided as compressed FASTQ files.
 
 The pipeline scans individual reads for Yq12-derived k-mers and uses a set of male-specific X-Degenerate Regions (XDR) Y-chromosome k-mers to estimate sequencing depth and normalize the lengths of Yq12-associated reads. This pipeline is very fast and can usually finish in ~15-20 mins of run time. If you just need fairly accurate estimations and you have HiFi reads available I would just run this over the SRKmer unless runtime doesn't really matter and you care more about the accuracy. 
@@ -53,12 +55,14 @@ The pipeline scans individual reads for Yq12-derived k-mers and uses a set of ma
 See [`LRKmer/README.md`](LRKmer/README.md) for installation, required files, and usage instructions.
 
 #### How to run:
-python LRKmer-v1.0.py \
-    --input sample.fastq.gz \
-    --out sample_LRKmer.csv \
-    --msy-kmers /YourDirectory/path/XDR_Kmers_filled_Filtered.json \
-    --cache-dir /YourDirectory/path/ \
-    --threads 8
+python LRKmer-v1.1.py
+--input sample.fastq.gz
+--out sample_LRKmer.csv
+--msy-kmers /YourDirectory/path/XDR_Kmers_filled_Filtered.json
+--cache-dir /YourDirectory/path/cache/
+--threads 8
+--batch-size 512
+--temp-dir /YourDirectory/tmp/
     
 ## Repository structure
 
