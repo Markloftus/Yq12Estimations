@@ -18,5 +18,5 @@ python LRKmer-v1.0.py \
     --cache-dir /YourDirectory/path/ \
     --threads 8
 
-
+This will export a CSV file with all the read proportions. I suggest filtering by keeping all reads >=.50 in the 'proportion' column then summing the 'normalizedSize' column.
 
