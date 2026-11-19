@@ -32,7 +32,8 @@ python LRKmer-v1.1.py \
 | `--batch-size` | Number of reads processed per worker task (default: 128; recommended: 512). |
 | `--temp-dir` | Directory for temporary SQLite files (optional). Temporary files are automatically removed after processing. |
 
-This will export a CSV file with all the read proportions. I suggest filtering by keeping all reads >=.50 in the 'proportion' column then summing the 'normalizedSize' column.
+# STEP 3: Analyze
+After running the LRKmer you will receive a CSV file with all the read Yq12 kmer proportions. I suggest filtering by keeping all reads >=.50 in the 'proportion' column then summing the 'normalizedSize' column.
 
 Log:
 November 19th, 2026 v1.1 was created. This uses around 75% less memory and is much faster. Added a temp folder parameter as well.
