@@ -46,7 +46,7 @@ python SRKmer-v1_1.py \
 
 ### LRKmer
 
-Note: Version 1.1 is now available. LRKmer v1.1 significantly improves memory efficiency and processing speed. Compared with the original implementation, these optimizations reduced peak memory usage by approximately 77% and processing time by approximately 59%. <br>
+<i>Note:</i> Version 1.1 is now available. LRKmer v1.1 significantly improves memory efficiency and processing speed. Compared with the original implementation, these optimizations reduced peak memory usage by approximately 77% and processing time by approximately 59%. <br>
 
 `LRKmer` estimates Yq12 size from long-read sequencing data (note: I have only tested on HiFi data not ONT) provided as compressed FASTQ files.
 
