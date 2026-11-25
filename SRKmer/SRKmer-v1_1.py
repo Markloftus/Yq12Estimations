@@ -14,7 +14,7 @@ from collections import defaultdict, deque
 from pathlib import Path
 from typing import Dict
 
-__version__ = "1.2"
+__version__ = "1.1"
 
 MIN_PYTHON_VERSION = (3, 7)
 if sys.version_info < MIN_PYTHON_VERSION:
